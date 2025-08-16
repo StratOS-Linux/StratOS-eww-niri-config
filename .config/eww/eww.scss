@@ -1,0 +1,356 @@
+/* Global settings*/
+
+*{
+	all: unset;
+	font-family: feather;
+	font-family: JetBrains Mono;
+}
+
+.genwin {
+	background-color: #282c34;
+	border-radius: 28px;
+	opacity: 0.95;
+}
+
+/* Uptime */
+
+.icontimer {
+	color: #c678dd;
+	font-size: 90px;
+	font-weight: normal;
+}
+
+.uphour {
+	color: #97c277;
+	font-size: 42px;
+	font-weight: bold;
+}
+
+.upmin {
+	color: #61afef;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.calendarWidget {
+	color: #abb2bf;
+	background-color: #282c34;
+	font-size: 25px;
+	font-weight: normal;
+	border-radius:  30px;
+	padding: 10px;
+}
+
+.calendarTitle {
+	color:  #abb2bf;
+	background-color:  transparent;
+	font-size:  22px;
+	border-radius:  30px;
+	font-weight:  normal;
+}
+
+// Buttons
+
+button {
+	all:  unset;
+	background-color:  #282c34;
+	padding: 4px;
+	border-radius:  28px;
+	opacity: 1.0;
+}
+
+.logoutBtn {
+	color: #e06c75;
+	font-size: 90px;
+	font-weight: bold;
+}
+
+.qlogoutBtn:hover {
+	background-color: #454c59;
+	font-weight: bold;
+}
+
+.shutdownBtn {
+	color: #e4bf7a;
+	font-size: 90px;
+	font-weight: bold;
+}
+
+.qshutdownBtn:hover {
+	background-color: #454c59;
+	font-weight: bold;
+}
+
+.restartBtn {
+	color: #97c277;
+	font-size: 90px;
+	font-weight: bold;
+}
+
+.qrestartBtn:hover {
+	background-color: #454c59;
+	font-weight: bold;
+}
+
+.qlogoutBtn {
+	color: #e06c75;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.qshutdownBtn {
+	color: #e4bf7a;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.qrestartBtn {
+	color: #97c277;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.qsuspendBtn {
+	color: #61afef;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.qsuspendBtn:hover {
+	color: #61afef;
+	background-color: #454c59;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+.lockBtn {
+	color: #61afef;
+	font-size: 80px;
+	font-weight: normal;
+}
+.qlockBtn {
+	background-color: #282c34;
+	color: #61afef;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.qlockBtn:hover {
+	background-color: #454c59;
+	font-weight: bold;
+	// border: 6px;
+}
+
+.wifiLabel {
+	font-size: 18px;
+}
+
+.musicArt {
+	background-size:  205px;
+	min-height:  60px;
+	min-width:  90px;
+	margin:  20px;
+	border-radius:  10px;
+	padding: 25px;
+}
+
+.musicTitle {
+	font-size: 30px;
+	font-weight:  bold;
+	min-width: 40px;
+	// margin-bottom:  10px;
+	color: #abb2bf;
+	background-color: transparent;
+	margin-right: 32px;
+}
+
+.musicArtist {
+	font-size:  18px;
+	// margin-bottom:  10px;
+	margin-left:  20px;
+	color: #abb2bf;
+	min-width: 4px;
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+.musicBtn {
+	font-size:  32px;
+	background-color: transparent;
+	color: #61afef;
+	border-radius: 12px;
+	padding-left: 12px;
+}
+
+.musicBtn:hover {
+	color:  #e06c75;
+}
+
+.musicArtSide {
+	background-size:  52px;
+	min-height:  50px;
+	min-width:  50px;
+	margin:  15px 5px 15px 15px;
+	border-radius:  48px;
+}
+
+.musicInfoSide {
+	font-size:  15px;
+	margin-top:  25px;
+	margin-left:  5px;
+	font-weight:  bold;
+	border-radius:  10px;
+	min-width:  40px;
+}
+
+.brightnessIcon {
+	color:  #c678dd;
+	font-size:  28px;
+}
+
+.brightnessBar scale trough {
+	all: unset;
+	background-color:  #3e4452;
+	border-radius:  16px;
+	min-height:  28px;
+	min-width:  240px;
+}
+
+.brightnessBar scale trough highlight {
+	all: unset;
+	border-radius:  16px;
+	background-color:  #c678dd;
+}
+
+.volumeIcon {
+	color:  #61afef;
+	font-size:  28px;
+}
+
+.volumeBar scale trough {
+	all: unset;
+	background-color:  #3e4452;
+	border-radius:  16px;
+	min-height:  28px;
+	min-width:  240px;
+}
+
+.volumeBar scale trough highlight {
+	all: unset;
+	border-radius:  16px;
+	background-color:  #61afef;
+}
+
+
+
+.cpuIcon {
+	color:  #97c277;
+	font-size:  28px;
+}
+
+.cpuBar scale trough {
+	all: unset;
+	background-color:  #3e4452;
+	border-radius:  16px;
+	min-height:  28px;
+	min-width:  240px;
+}
+
+.cpuBar scale trough highlight {
+	all: unset;
+	border-radius:  16px;
+	background-color:  #97c277;
+}
+.batteryIcon {
+	color:  #e06c75;
+	font-size:  28px;
+	margin-right:  -15px;
+}
+
+.batteryBar scale trough {
+	all: unset;
+	background-color:  #3e4452;
+	border-radius:  16px;
+	min-height:  28px;
+	min-width:  240px;
+}
+
+.batteryBar scale trough highlight {
+	all: unset;
+	border-radius:  16px;
+	background-color:  #e06c75;
+}
+
+.volSlider scale trough highlight {
+  all: unset;
+  background-color: #e4bf7a;
+  border-radius: 40px;
+}
+
+.volSlider scale trough {
+  all: unset;
+  // background-color: #97c277;
+  background-color: #282c34;
+  border-radius: 50px;
+  min-height: 28px;
+  min-width: 240px;
+  margin-left: -50px;
+  margin-right: 15px;
+}
+
+.volSliderIcon {
+  color: #e4bf7a;
+  background-color: transparent;
+  font-size: 28px;
+}
+
+
+.briSlider scale trough highlight {
+  all: unset;
+  background-color: #c678dd;
+  // color: #000000;
+  border-radius: 50px;
+}
+
+.briSlider scale trough {
+  background-color: #282c34;
+  border-radius: 50px;
+  min-height: 28px;
+  min-width: 240px;
+  margin-left: -50px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.briSliderIcon {
+  color: #c678dd;
+  background-color: transparent;
+  font-size: 28px;
+}
+
+.focused {
+	background-color: #97c277;
+	border-radius:  12px;
+	margin: 5px;
+	padding:  4px;
+}
+
+.ws {
+	background:  #282c34;
+	border-radius:   2rem;
+	margin:  0.2rem 0.2rem;
+	padding:  0.5rem;
+}
+
+.ws-red {
+	background:  #e06c75;
+}
+
+.ws-yellow {
+	background:  #e4bf7a;
+}
+
+.ws-green {
+	background:  #97c277;
+}
