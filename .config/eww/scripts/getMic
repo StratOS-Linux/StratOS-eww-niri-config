@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-micro=`pactl list sources | grep -A 10 'Name: alsa_input.pci-0000_00_1f.3.analog-stereo' | grep 'Mute:' | awk -F ' ' '{print $2}'`
-if [ $micro == 'yes' ]; then
-	echo "Disabled"
-elif [ $micro == 'no' ]; then
-	echo "Enabled"
-fi

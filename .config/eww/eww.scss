@@ -1,356 +1,404 @@
-/* Global settings*/
-
+/** Global *******************************************/
 *{
-	all: unset;
-	font-family: feather;
-	font-family: JetBrains Mono;
+    all: unset;
+    font-family: feather;
+    font-family: Iosevka;
 }
 
+/** Background ***************************************/
+.bg {
+    background-image: url("images/bg.png");
+    background-color: #474D59;
+    opacity: 1;
+}
+
+/** Generic window ***********************************/
 .genwin {
-	background-color: #282c34;
-	border-radius: 28px;
-	opacity: 0.95;
+    // background-color: transparent;
+    background-color:#0c0d1c ;
+    border-radius: 16px;
+    border: 4px solid #5c64f1;
 }
 
-/* Uptime */
+/** Profile ******************************************/
+.face {
+    background-size: 200px;
+    min-height: 200px;
+    min-width: 200px;
+    margin: 65px 0px 0px 0px;
+    border-radius: 100%;
+}
 
+.fullname {
+    color: #D46389;
+    font-size : 30px;
+    font-weight : bold;
+}
+
+.username {
+    color: #8FBCBB;
+    font-size : 22px;
+    font-weight : bold;
+    margin : -15px 0px 0px 0px;
+}
+
+/** System ********************************************/
+.iconcpu, .iconmem, .iconbright, .iconbat {
+    font-size : 32px;
+    font-weight : normal;
+}
+.iconcpu {
+    color: #BF616A;
+}
+.iconmem {
+    color: #A3BE8C;
+}
+.iconbright {
+    color: #e4bf7a;
+}
+.iconbat {
+    color: #88C0D0;
+}
+
+.cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough {
+    all: unset;
+    // background-color: #292d39; // background colour for the battery,CPU usage etc "progress bar"
+    background-color: #282c34;
+    border-radius: 16px;
+    min-height: 28px;
+    min-width: 240px;
+}
+
+.cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough highlight {
+    all: unset;
+    border-radius: 16px;
+}
+
+.cpu_bar scale trough highlight {
+    background-color: #BF616A;
+}
+.mem_bar scale trough highlight {
+    background-color: #A3BE8C;
+}
+.bright_bar scale trough highlight {
+    background-color: #e4bf7a;
+}
+.bat_bar scale trough highlight {
+    background-color: #88C0D0;
+}
+/** Calendar ********************************************/
+.cal {
+    // background-color: transparent;
+    background-color: #0c0d1c;
+    font-family: JetBrainsMono NF;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: bold;
+
+    .cal-in {
+	border-radius: 16px;
+	padding: 0px 10px 0px 10px;
+	border: 4px solid #5c64f1; // comment this out to lose the border
+	// border: 4px solid #63a7fa;
+	color: transparent;
+
+	.cal {
+	    &.highlight {
+		padding: 20px;
+	    }
+
+	    padding: 5px 5px 5px 5px;
+	    margin-left: 10px;
+	}
+    }
+}
+
+calendar {
+    color: #61AFEF;
+    // color: #bfc9db;
+}
+calendar:selected {
+    color: #c678dd;
+}
+
+calendar.header {
+    color: #a1bdce;
+    font-weight: bold;
+}
+
+calendar.button {
+    color: #afbea2;
+}
+
+calendar.highlight {
+    color: #97c277;
+    font-weight: bold;
+}
+
+calendar:indeterminate {
+    color: #61AFEF;
+    // color: #bfc9db;
+}
+
+/** Clock ********************************************/
+.time_hour, .time_min {
+    color: #61afef;
+    font-size : 70px;
+    font-weight : bold;
+}
+.time_hour {
+    margin : 15px 0px 0px 20px;
+}
+.time_min {
+    margin : 0px 0px 10px 0px;
+}
+
+.time_mer {
+    color: #97c277;
+    font-size : 40px;
+    font-weight : bold;
+    margin : 20px 50px 0px 0px;
+}
+
+.time_day {
+    color: #e4bf7a;
+    font-size : 30px;
+    font-weight : normal;
+    margin : 0px 0px 20px -30px;
+}
+
+/** Uptime ********************************************/
 .icontimer {
-	color: #c678dd;
-	font-size: 90px;
-	font-weight: normal;
+    color: #c678dd;
+    font-size : 90px;
+    font-weight : normal;
 }
 
 .uphour {
-	color: #97c277;
-	font-size: 42px;
-	font-weight: bold;
+    color: #E5E9F0;
+    font-size : 42px;
+    font-weight : bold;
 }
 
 .upmin {
-	color: #61afef;
-	font-size: 32px;
-	font-weight: bold;
+    color: #E5E9F0;
+    font-size : 32px;
+    font-weight : bold;
 }
 
-.calendarWidget {
-	color: #abb2bf;
-	background-color: #282c34;
-	font-size: 25px;
-	font-weight: normal;
-	border-radius:  30px;
-	padding: 10px;
+/** Music ***************************************/
+.album_art {
+    background-size: 240px;
+    min-height: 240px;
+    min-width: 240px;
+    margin: 20px;
+    border-radius: 14px;
 }
 
-.calendarTitle {
-	color:  #abb2bf;
-	background-color:  transparent;
-	font-size:  22px;
-	border-radius:  30px;
-	font-weight:  normal;
+.song {
+    color: #8FBCBB;
+    font-size : 24px;
+    font-weight : bold;
+    margin : 40px 0px 0px 0px;
 }
 
-// Buttons
-
-button {
-	all:  unset;
-	background-color:  #282c34;
-	padding: 4px;
-	border-radius:  28px;
-	opacity: 1.0;
+.artist {
+    color: #e4bf7a;
+    font-size : 16px;
+    font-weight : normal;
+    margin : 0px 0px 15px 0px;
 }
 
-.logoutBtn {
-	color: #e06c75;
-	font-size: 90px;
-	font-weight: bold;
+.btn_prev, .btn_play, .btn_next {
+    font-family: Iosevka Nerd Font;
+}
+.btn_prev {
+    color: #e4bf7a;
+    font-size : 32px;
+    font-weight : normal;
+}
+.btn_play {
+    color: #A3BE8C;
+    font-size : 48px;
+    font-weight : bold;
+}
+.btn_next {
+    color: #e4bf7a;
+    font-size : 32px;
+    font-weight : normal;
 }
 
-.qlogoutBtn:hover {
-	background-color: #454c59;
-	font-weight: bold;
+.music_bar scale trough highlight {
+    all: unset;
+    background-color: #c678dd;
+    border-radius: 8px;
+}
+.music_bar scale trough {
+    all: unset;
+    background-color: #3A404C;
+    border-radius: 8px;
+    min-height: 20px;
+    min-width: 310px;
+    margin : 10px 0px 0px 0px;
 }
 
-.shutdownBtn {
-	color: #e4bf7a;
-	font-size: 90px;
-	font-weight: bold;
+/** Weather ***************************************/
+.iconweather {
+    font-family: Iosevka Nerd Font;
+    font-size : 120px;
+    font-weight : normal;
+    margin : 15px 0px 0px 30px;
 }
 
-.qshutdownBtn:hover {
-	background-color: #454c59;
-	font-weight: bold;
+.label_temp {
+    color : #A6D1DD;
+    font-size : 80px;
+    font-weight : bold;
+    margin : -15px 30px 0px 0px;
 }
 
-.restartBtn {
-	color: #97c277;
-	font-size: 90px;
-	font-weight: bold;
+.label_stat {
+    color : #BF616A;
+    font-size : 38px;
+    font-weight : bold;
 }
 
-.qrestartBtn:hover {
-	background-color: #454c59;
-	font-weight: bold;
+.label_quote {
+    color : #E5E5E5;
+    font-size : 18px;
+    font-weight : normal;
 }
 
-.qlogoutBtn {
-	color: #e06c75;
-	font-size: 48px;
-	font-weight: bold;
+/** Applications ***************************************/
+.appbox {
+    margin : 15px 0px 0px 25px;
 }
 
-.qshutdownBtn {
-	color: #e4bf7a;
-	font-size: 48px;
-	font-weight: bold;
+.app_fox, .app_telegram, .app_discord, .app_terminal,
+.app_files, .app_geany, .app_code, .app_gimp, .app_vbox {
+    background-repeat: no-repeat;
+    background-size: 64px;
+    min-height: 64px;
+    min-width: 64px;
+    margin: 8px 8px 0px 8px;
 }
 
-.qrestartBtn {
-	color: #97c277;
-	font-size: 48px;
-	font-weight: bold;
-}
+.app_fox {}
+.app_telegram {}
+.app_discord {}
+.app_terminal {}
+.app_files {}
+.app_geany {}
+.app_code {}
+.app_gimp {}
+.app_vbox {}
 
-.qsuspendBtn {
-	color: #61afef;
-	font-size: 48px;
-	font-weight: bold;
+/** Links ***************************************/
+.iconweb, .iconmail {
+    color: #FFFFFF;
+    font-family: Iosevka Nerd Font;
+    font-size : 70px;
+    font-weight : normal;
 }
-
-.qsuspendBtn:hover {
-	color: #61afef;
-	background-color: #454c59;
-	font-size: 48px;
-	font-weight: bold;
-}
-
-.lockBtn {
-	color: #61afef;
-	font-size: 80px;
-	font-weight: normal;
-}
-.qlockBtn {
-	background-color: #282c34;
-	color: #61afef;
-	font-size: 36px;
-	font-weight: bold;
-}
-
-.qlockBtn:hover {
-	background-color: #454c59;
-	font-weight: bold;
-	// border: 6px;
-}
-
-.wifiLabel {
-	font-size: 18px;
-}
-
-.musicArt {
-	background-size:  205px;
-	min-height:  60px;
-	min-width:  90px;
-	margin:  20px;
-	border-radius:  10px;
-	padding: 25px;
-}
-
-.musicTitle {
-	font-size: 30px;
-	font-weight:  bold;
-	min-width: 40px;
-	// margin-bottom:  10px;
-	color: #abb2bf;
-	background-color: transparent;
-	margin-right: 32px;
-}
-
-.musicArtist {
-	font-size:  18px;
-	// margin-bottom:  10px;
-	margin-left:  20px;
-	color: #abb2bf;
-	min-width: 4px;
-	background-color: transparent;
-	border-radius: 10px;
-}
-
-.musicBtn {
-	font-size:  32px;
-	background-color: transparent;
-	color: #61afef;
-	border-radius: 12px;
-	padding-left: 12px;
-}
-
-.musicBtn:hover {
-	color:  #e06c75;
-}
-
-.musicArtSide {
-	background-size:  52px;
-	min-height:  50px;
-	min-width:  50px;
-	margin:  15px 5px 15px 15px;
-	border-radius:  48px;
-}
-
-.musicInfoSide {
-	font-size:  15px;
-	margin-top:  25px;
-	margin-left:  5px;
-	font-weight:  bold;
-	border-radius:  10px;
-	min-width:  40px;
-}
-
-.brightnessIcon {
-	color:  #c678dd;
-	font-size:  28px;
-}
-
-.brightnessBar scale trough {
-	all: unset;
-	background-color:  #3e4452;
-	border-radius:  16px;
-	min-height:  28px;
-	min-width:  240px;
-}
-
-.brightnessBar scale trough highlight {
-	all: unset;
-	border-radius:  16px;
-	background-color:  #c678dd;
-}
-
-.volumeIcon {
-	color:  #61afef;
-	font-size:  28px;
-}
-
-.volumeBar scale trough {
-	all: unset;
-	background-color:  #3e4452;
-	border-radius:  16px;
-	min-height:  28px;
-	min-width:  240px;
-}
-
-.volumeBar scale trough highlight {
-	all: unset;
-	border-radius:  16px;
-	background-color:  #61afef;
+.iconmail {
+    color: #DF584E;
 }
 
 
-
-.cpuIcon {
-	color:  #97c277;
-	font-size:  28px;
+/** Power buttons ***************************************/
+.btn_logout, .btn_sleep, .btn_reboot, .btn_poweroff {
+    // background-color: transparent;
+    background-color: #0c0d1c;
+    border-radius: 8px;
+    font-size : 48px;
+    font-weight : bold;
 }
 
-.cpuBar scale trough {
-	all: unset;
-	background-color:  #3e4452;
-	border-radius:  16px;
-	min-height:  28px;
-	min-width:  240px;
+.btn_logout {
+    color: #BF616A;
+}
+.btn_sleep {
+    color: #A3BE8C;
+}
+.btn_reboot {
+    color: #e4bf7a;
+}
+.btn_poweroff {
+    color: #88C0D0;
 }
 
-.cpuBar scale trough highlight {
-	all: unset;
-	border-radius:  16px;
-	background-color:  #97c277;
+/** Home folders ***************************************/
+.hddbox {
+    background-color: #3A404C;
+    border-radius: 10px;
+    margin : 15px;
 }
-.batteryIcon {
-	color:  #e06c75;
-	font-size:  28px;
-	margin-right:  -15px;
+.hddicon {
+    color: #81A1C1;
+    font-family: Iosevka Nerd Font;
+    font-size : 70px;
+    font-weight : normal;
+    margin : 25px 20px 25px 40px;
 }
-
-.batteryBar scale trough {
-	all: unset;
-	background-color:  #3e4452;
-	border-radius:  16px;
-	min-height:  28px;
-	min-width:  240px;
+.hdd_label {
+    color: #E5E9F0;
+    font-size : 48px;
+    font-weight : bold;
+    margin : 0px 0px 0px 15px;
 }
-
-.batteryBar scale trough highlight {
-	all: unset;
-	border-radius:  16px;
-	background-color:  #e06c75;
-}
-
-.volSlider scale trough highlight {
-  all: unset;
-  background-color: #e4bf7a;
-  border-radius: 40px;
+.fs_sep {
+    color: #292f3a;
+    font-size : 36px;
+    font-weight : bold;
 }
 
-.volSlider scale trough {
-  all: unset;
-  // background-color: #97c277;
-  background-color: #282c34;
-  border-radius: 50px;
-  min-height: 28px;
-  min-width: 240px;
-  margin-left: -50px;
-  margin-right: 15px;
+.iconfolder1, .iconfolder2, .iconfolder3, .iconfolder4, .iconfolder5, .iconfolder6  {
+    font-family: Iosevka Nerd Font;
+    font-size : 32px;
+    font-weight : normal;
+    margin : 0px 0px 0px 75px;
+}
+.iconfolder1 {
+    color: #BF616A;
+}
+.iconfolder2 {
+    color: #A3BE8C;
+}
+.iconfolder3 {
+    color: #e4bf7a;
+}
+.iconfolder4 {
+    color: #81A1C1;
+}
+.iconfolder5 {
+    color: #c678dd;
+}
+.iconfolder6 {
+    color: #88C0D0;
 }
 
-.volSliderIcon {
-  color: #e4bf7a;
-  background-color: transparent;
-  font-size: 28px;
+.label_folder1, .label_folder2, .label_folder3, .label_folder4, .label_folder5, .label_folder6  {
+    font-size : 22px;
+    font-weight : normal;
+    margin : 0px 0px 0px 30px;
+}
+.label_folder1 {
+    color: #BF616A;
+}
+.label_folder2 {
+    color: #A3BE8C;
+}
+.label_folder3 {
+    color: #e4bf7a;
+}
+.label_folder4 {
+    color: #81A1C1;
+}
+.label_folder5 {
+    color: #c678dd;
+}
+.label_folder6 {
+    color: #88C0D0;
 }
 
-
-.briSlider scale trough highlight {
-  all: unset;
-  background-color: #c678dd;
-  // color: #000000;
-  border-radius: 50px;
-}
-
-.briSlider scale trough {
-  background-color: #282c34;
-  border-radius: 50px;
-  min-height: 28px;
-  min-width: 240px;
-  margin-left: -50px;
-  margin-right: 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.briSliderIcon {
-  color: #c678dd;
-  background-color: transparent;
-  font-size: 28px;
-}
-
-.focused {
-	background-color: #97c277;
-	border-radius:  12px;
-	margin: 5px;
-	padding:  4px;
-}
-
-.ws {
-	background:  #282c34;
-	border-radius:   2rem;
-	margin:  0.2rem 0.2rem;
-	padding:  0.5rem;
-}
-
-.ws-red {
-	background:  #e06c75;
-}
-
-.ws-yellow {
-	background:  #e4bf7a;
-}
-
-.ws-green {
-	background:  #97c277;
-}
+/** EOF *************************************************/

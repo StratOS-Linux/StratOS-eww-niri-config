@@ -1,3 +1,0 @@
-#!/usr/bin/env zsh
-
-wpctl set-volume @DEFAULT_SINK@ $1

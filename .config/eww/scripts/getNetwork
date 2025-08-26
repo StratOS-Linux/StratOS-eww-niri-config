@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-network=`nmcli --fields "NAME" connection show --active | head -n 2 | sed 1D | grep -v "lo"`
-echo "$network"
