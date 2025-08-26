@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+set _pwd (dirname (readlink -m (status --current-filename)))
+eww -c "$_pwd/../eww/dashboard/" open-many --toggle system uptime clock calendar
