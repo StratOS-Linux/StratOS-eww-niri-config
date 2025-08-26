@@ -15,6 +15,7 @@ optdepends=(
 
 prepare() {
 	cp -r $startdir/.config/ $srcdir/
+	cp -r $startdir/usr $srcdir/
 }
 
 source=()
@@ -23,6 +24,6 @@ install=stratos-eww-config.install
 package() {
     install -d $pkgdir/etc/skel/.config/
     install -d $pkgdir/usr/local/bin/
-    install -Dm755 $srcdir/.config/eww/ $pkgdir/etc/skel/.config/
-    install -Dm755 $srcdir/usr/local/bin/eww-toggle $pkgdir/usr/local/bin/
+    cp -ra $srcdir/.config/eww/ $pkgdir/etc/skel/.config/
+    cp -ra $srcdir/usr/local/bin/eww-toggle $pkgdir/usr/local/bin/
 }
