@@ -1,0 +1,5 @@
+#!/usr/bin/env fish 
+set _pwd (dirname (readlink -m (status --current-filename)))
+eww -c "$_pwd/../eww/dashboard/" open-many logout sleep poweroff reboot
+sleep 3
+eww -c "$_pwd/../eww/dashboard/" close logout sleep poweroff reboot
