@@ -1,7 +1,7 @@
 # Maintainer: @zstg <o0vckutt@duck.com>
 pkgname=stratos-eww-config
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Eww configuration for StratOS"
 arch=('any')
 license=('GPL3')
