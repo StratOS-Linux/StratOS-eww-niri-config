@@ -25,5 +25,5 @@ package() {
     install -d $pkgdir/etc/skel/.config/
     install -d $pkgdir/usr/local/bin/
     cp -ra $srcdir/.config/eww/ $pkgdir/etc/skel/.config/
-    cp -ra $srcdir/usr/local/bin/eww-toggle $pkgdir/usr/local/bin/
+    cp -ra $srcdir/usr/local/bin/* $pkgdir/usr/local/bin/
 }
