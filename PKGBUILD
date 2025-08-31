@@ -1,8 +1,8 @@
-# Maintainer: @zstg <o0vckutt@duck.com>
-pkgname=stratos-eww-config
+# Maintainer: @magitian <magitian@duck.com>
+pkgname=stratos-eww-niri-config
 pkgver=1.0
-pkgrel=3
-pkgdesc="Eww configuration for StratOS"
+pkgrel=1
+pkgdesc="Eww configuration for StratOS' Niri spin"
 arch=('any')
 license=('GPL3')
 depends=(
@@ -15,7 +15,6 @@ optdepends=(
 
 prepare() {
 	cp -r $startdir/.config/ $srcdir/
-	cp -r $startdir/usr $srcdir/
 }
 
 source=()
@@ -23,7 +22,5 @@ install=stratos-eww-config.install
 
 package() {
     install -d $pkgdir/etc/skel/.config/
-    install -d $pkgdir/usr/local/bin/
     cp -ra $srcdir/.config/eww/ $pkgdir/etc/skel/.config/
-    cp -ra $srcdir/usr/local/bin/* $pkgdir/usr/local/bin/
 }

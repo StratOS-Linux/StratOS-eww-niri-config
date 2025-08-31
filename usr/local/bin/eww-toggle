@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-eww open-many --toggle system uptime clock calendar

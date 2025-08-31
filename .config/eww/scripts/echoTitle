@@ -1,0 +1,2 @@
+#!/bin/zsh
+cat /tmp/eww-music/spotify/title

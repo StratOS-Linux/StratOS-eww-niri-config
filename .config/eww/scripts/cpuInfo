@@ -1,0 +1,38 @@
+#!/bin/bash
+
+prevTotal=0
+prevIdle=0
+cpuFile="/tmp/cpuUsage"
+
+## Get cpu usage
+if [[ -f "${cpuFile}" ]]; then
+	fileCont=$(cat "${cpuFile}")
+	prevTotal=$(echo "${fileCont}" | head -n 1)
+	prevIdle=$(echo "${fileCont}" | tail -n 1)
+fi
+
+cpu=(`cat /proc/stat | grep '^cpu '`) # Get the total cpu statistics.
+unset cpu[0]                          # Discard the "cpu" prefix.
+IDLE=${cpu[4]}                        # Get the idle cpu time.
+
+# Calculate the total cpu time.
+total=0
+
+for VALUE in "${cpu[@]:0:4}"; do
+	let "total=$total+$VALUE"
+done
+
+if [[ "${prevTotal}" != "" ]] && [[ "${prevIdle}" != "" ]]; then
+	# Calculate the cpu usage since we last checked.
+	let "diffIdle=$IDLE-$prevIdle"
+	let "diffTotal=$total-$prevTotal"
+	let "diffUsage=(1000*($diffTotal-$diffIdle)/$diffTotal+5)/10"
+	echo "${diffUsage}"
+else
+	echo "?"
+fi
+
+# Remember the total and idle cpu times for the next check.
+echo "${total}" > "${cpuFile}"
+echo "${IDLE}" >> "${cpuFile}"
+

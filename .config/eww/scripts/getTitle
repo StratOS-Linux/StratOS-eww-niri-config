@@ -1,0 +1,12 @@
+#!/usr/bin/zsh
+title=$(playerctl metadata --format '{{ title }}')
+count=$(echo -n "$title" | wc -c)
+if [ -z "$title" ]; then
+	echo "              ";
+else
+	if [ "$count" -le 18 ]; then
+		echo $title
+	else 
+		echo -n $(playerctl metadata --format '{{ title }}' | cut -c 1-12); echo -n "..."
+	fi
+fi

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-eww open-many logout sleep poweroff reboot
-sleep 3
-eww close logout sleep poweroff reboot
